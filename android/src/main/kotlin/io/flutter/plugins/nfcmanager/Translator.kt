@@ -32,7 +32,8 @@ fun getFlags(options: List<String> = listOf()): Int {
     flags = flags or NfcAdapter.FLAG_READER_NFC_F
   }
 
-  return flags
+  // FIXME move this somewhere better
+  return flags or NfcAdapter.FLAG_READER_NO_PLATFORM_SOUNDS;
 }
 
 fun getTagMap(arg: Tag): Map<String, Any?> {
